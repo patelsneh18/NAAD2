@@ -8,8 +8,14 @@ public class SubTask2 {
 
     private static int totalWeight(String s, int[] weights) {
         //Write your code here!
-
-        return 0;
+        s.toUpperCase();
+        char[] ch = s.toCharArray();
+        int weight = 0;
+        for (int i=0;i<s.length();i++){
+            int index = ch[i] - 65;
+            weight += weights[index];
+        }
+        return weight;
     }
 
 }

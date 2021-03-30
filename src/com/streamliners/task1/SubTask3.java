@@ -8,8 +8,24 @@ public class SubTask3 {
 
     private static boolean isDirectlyProportional(int[] x, int[] y) {
         //Write your code here!
-
-        return false;
+        for (int i = 1; i < x.length; i++) {
+            if (x[i] > x[i-1]) {
+                if(y[i] < y[i-1]) {
+                    return false;
+                }
+            }
+            else if (x[i] < x[i-1]) {
+                if(y[i] > y[i-1]) {
+                    return false;
+                }
+            }
+            else {
+                if (y[i] != y[i-1]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }
