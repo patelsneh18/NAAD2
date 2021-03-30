@@ -1,5 +1,6 @@
 package com.streamliners.task2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SubTask1 {
@@ -9,9 +10,12 @@ public class SubTask1 {
     }
 
     private static List<Integer> getList(String s) {
-        //Write your code here!
-
-        return null;
+        String[] result = s.split(";");
+        List<Integer> list = new ArrayList<Integer>();
+        for (int i=0;i<result.length;i++){
+            list.add(Integer.parseInt(result[i]));
+        }
+        return list;
     }
 
 }
