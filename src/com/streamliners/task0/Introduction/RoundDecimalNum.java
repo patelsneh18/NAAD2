@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class RoundDecimalNum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a Number");
+        System.out.println("Enter a Number");
         double number = sc.nextDouble();
         System.out.println("Enter decimal places you want to round to:");
         int num = sc.nextInt();

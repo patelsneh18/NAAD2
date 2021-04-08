@@ -24,7 +24,7 @@ public class SubTask2 {
             hashMap.put(arrOfNums.get(i),0);
         }
 
-        for (int i=0;i< list.size();i++){
+        for (int i=0;i<list.size();i++){
             hashMap.replace(list.get(i),hashMap.get(list.get(i)), hashMap.get(list.get(i))+1 );
         }
 

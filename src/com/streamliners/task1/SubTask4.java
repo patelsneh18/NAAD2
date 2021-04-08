@@ -2,13 +2,20 @@ package com.streamliners.task1;
 
 import java.util.*;
 
+class CustomException extends Exception {
+    public CustomException(String message) {
+        // call the constructor of Exception class
+        super(message);
+    }
+}
+
 public class SubTask4 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CustomException {
         String s = "12332321";
-        String replacements = "2R4D";
+        String replacements = "2R3T4D";
         if(!checkCustomReg(s, replacements)) {
-            System.out.println("ERROR: The replacement string is not correct.");
-            return;
+            throw new CustomException("ERROR: The replacement string is not correct.");
+//            System.out.println("ERROR: The replacement string is not correct.");
         }
         System.out.println(modify(s, replacements));
     }
@@ -42,9 +49,12 @@ public class SubTask4 {
                 if (Character.isLetter(replacements.charAt(i))) continue;
                 return false;
             }
-            if (!numStrArr.equals(replaceArr)) return false;
+            for (int i=0;i< numStr.size();i++){
+                if (numStrArr.get(i) == replaceArr.get(i)) continue;
+                return false;
+            }
+//            if (!numStrArr.equals(replaceArr)) return false;
             return true;
-
 
         }
 }
