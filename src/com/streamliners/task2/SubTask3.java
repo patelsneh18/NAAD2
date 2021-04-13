@@ -49,6 +49,7 @@ public class SubTask3 {
             }
             System.out.println("Character found " + rCount + " time(s)");
             chances--;
+            // chances-1
         }
     }
 
